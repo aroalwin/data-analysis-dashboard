@@ -1,0 +1,50 @@
+<!-- 
+Author: AROCKIA ALWIN A
+Project: Modern Easy Data Analysis Dashboard
+Version: 1.0
+Date: August 07, 2025
+Description: Main HTML file for the dashboard application.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Data Analysis Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@latest/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Modern Data Analysis Dashboard</h1>
+        <button id="themeToggle"><i class="fas fa-moon"></i> Toggle Dark Mode</button>
+    </header>
+    <main>
+        <section id="uploadSection">
+            <div id="dropZone">Drop file here or click to upload
+                <input type="file" id="fileUpload" accept=".csv,.xlsx,.json" style="display: none;">
+            </div>
+        </section>
+        <section id="previewSection" style="display: none;">
+            <h2>Data Preview</h2>
+            <div id="preview"></div>
+            <button id="generateDashboard" disabled><i class="fas fa-chart-bar"></i> Generate Dashboard</button>
+        </section>
+        <section id="dashboardSection">
+            <div id="dashboard"></div>
+        </section>
+        <section id="exportToolbar">
+            <button id="downloadExcel" disabled><i class="fas fa-file-excel"></i> Download Data as Excel</button>
+            <button id="downloadImage" disabled><i class="fas fa-image"></i> Download Dashboard as Image</button>
+        </section>
+        <footer>
+            <p>Developed and Designed by Your Name</p>
+        </footer>
+        <div id="loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
