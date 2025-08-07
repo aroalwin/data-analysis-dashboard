@@ -6,14 +6,7 @@ Date: August 07, 2025
 Description: JavaScript logic for the dashboard application.
 */
 
-/* 
-Author: Your Name
-Assisted by: Grok from xAI (https://x.ai)
-Project: Modern Easy Data Analysis Dashboard
-Version: 1.0
-Date: August 07, 2025
-Description: JavaScript logic for the dashboard application.
-*/
+
 
 let globalData = [];
 let globalHeaders = [];
@@ -513,4 +506,5 @@ window.addEventListener('resize', handleResize);
 // Cleanup on page unload
 window.addEventListener('unload', () => {
     window.removeEventListener('resize', handleResize);
+
 });
